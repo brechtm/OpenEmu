@@ -1,3 +1,3 @@
 osx_image: xcode7
 language: objective-c
-script: xcodebuild -workspace OpenEmu.xcworkspace -scheme "Build All + Experimental" -configuration Release
+script: set -o pipefail && xcodebuild -workspace OpenEmu.xcworkspace -scheme "Build All + Experimental" -configuration Release | xcpretty -c
